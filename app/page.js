@@ -6,9 +6,9 @@ import { HiCheck, HiExclamation, HiLockClosed } from 'react-icons/hi';
 import { GiRecycle, GiBananaBunch } from 'react-icons/gi';
 import { MdLogout, MdRefresh, MdOutlineInbox } from 'react-icons/md';
 
-// Hardcoded Supabase Credentials provided by the user (Secured privately inside the client application)
-const SUPABASE_URL = 'https://amxvgzrrikccjgtfktpa.supabase.co';
-const SUPABASE_KEY = 'sb_publishable_zWn_kC_9mk3huTQq5HFQCA_0gkioqf_';
+// Supabase Configuration from Environment Variables
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_KEY;
 
 export default function App() {
   // Navigation & Authentication States
