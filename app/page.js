@@ -9,6 +9,12 @@ import { MdLogout, MdRefresh, MdOutlineInbox } from 'react-icons/md';
 // Supabase Configuration from Environment Variables
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.env.NEXT_PUBLIC_SUPABASE_KEY;
+const WHATSAPP_NUMBER = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '62881037144574').replace(/\D/g, '');
+
+const createWhatsAppUrl = (message) => {
+  const encodedMessage = encodeURIComponent(message);
+  return `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodedMessage}`;
+};
 
 export default function App() {
   // Navigation & Authentication States
@@ -432,7 +438,6 @@ export default function App() {
   // Open purchase modal and set initial values
   const initiatePurchase = (product) => {
     setSelectedProduct(product);
-    setIsLogSuccess(false);
     if (product.price_numeric > 0) {
       setQuantity(10);
       const initialMessage = `Halo Elova, saya ingin memesan ${10} pcs "${product.title}". Bagaimana prosedur pengiriman dan pembayarannya?`;
@@ -477,9 +482,7 @@ export default function App() {
     }
 
     // Open WhatsApp URL
-    const encodedMessage = encodeURIComponent(customMessage);
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=62881037144574&text=${encodedMessage}`;
-    window.open(whatsappUrl, '_blank');
+    window.open(createWhatsAppUrl(customMessage), '_blank');
     setIsModalOpen(false);
     triggerNotification("Membuka chat WhatsApp. Terima kasih telah memesan!");
   };
@@ -529,7 +532,7 @@ export default function App() {
 
               <div className="hidden md:block">
                 <a 
-                  href="https://api.whatsapp.com/send?phone=62881037144574&text=Halo%20Elova,%20saya%20ingin%20berkonsultasi%20mengenai%20pot%20semai%20biodegradable!"
+                  href={createWhatsAppUrl("Halo Elova, saya ingin berkonsultasi mengenai pot semai biodegradable!")}
                   target="_blank"
                   className="inline-block px-5 py-2.5 rounded-lg border-2 border-[#374F3B] text-[#374F3B] hover:bg-[#374F3B] hover:text-white font-semibold text-sm transition-all"
                 >
@@ -559,7 +562,7 @@ export default function App() {
                 <a href="#katalog" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-[#6B7280]">Katalog</a>
                 <a href="#edukasi" onClick={() => setMobileMenuOpen(false)} className="text-base font-medium text-[#6B7280]">Cara Penggunaan</a>
                 <a 
-                  href="https://api.whatsapp.com/send?phone=62881037144574&text=Halo%20Elova!"
+                  href={createWhatsAppUrl("Halo Elova!")}
                   target="_blank"
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full text-center px-5 py-3 rounded-lg bg-[#374F3B] text-white font-semibold text-sm"
