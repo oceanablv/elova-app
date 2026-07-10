@@ -578,15 +578,15 @@ export default function App() {
             <section id="hero" className="py-12 md:py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7 flex flex-col items-start gap-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EDF1E4] text-[#374F3B] text-xs font-bold uppercase tracking-wider">
-                  <FaLeaf className="text-lg" /> Alternatif Ramah Lingkungan Pengganti Polybag
+                  <FaLeaf className="text-lg" /> Grow Green, Grow Better
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#0A0A0A] leading-[1.1]">
-                  Pot Semai Pelepah Pisang: <span className="text-[#374F3B] underline decoration-[#A3B18A] decoration-wavy underline-offset-8">Solusi Hijau</span> Bebas Sampah Plastik.
+                  Dari Pelepah Pisang Terbuang, Tumbuh <span className="inline-block whitespace-nowrap text-[#374F3B] underline decoration-[#A3B18A] decoration-wavy underline-offset-[10px] [text-decoration-skip-ink:none]">Solusi Lebih Hijau</span>
                 </h1>
 
                 <p className="text-base md:text-lg text-[#6B7280] leading-relaxed max-w-xl">
-                  Ganti polybag plastik dan seed tray Anda dengan Elova. Dapat langsung ditanam bersama bibit ke dalam tanah untuk menekan sampah plastik perkebunan dan mencegah risiko kerusakan akar.
+                  Elova mengolah limbah pelepah pisang menjadi pot semai biodegradable yang alami, praktis, dan membantu mengurangi penggunaan polybag plastik sejak tahap pembibitan.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mt-2">
@@ -622,8 +622,8 @@ export default function App() {
               </div>
 
               {/* Hero Collage Bento Style */}
-              <div className="lg:col-span-5 grid grid-cols-2 gap-4 h-[380px] md:h-[480px]">
-                <div className="col-span-2 bg-[#EDF1E4] rounded-2xl relative overflow-hidden flex flex-col justify-end p-6 border border-[#E5E7EB] group hover:border-[#374F3B] transition-all">
+              <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="sm:col-span-2 bg-[#EDF1E4] rounded-2xl relative overflow-hidden flex flex-col justify-end p-6 border border-[#E5E7EB] group hover:border-[#374F3B] transition-all min-h-[260px] md:min-h-[300px]">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#374F3B]/40 to-transparent z-10" />
                   <div className="absolute inset-0 flex items-center justify-center transform group-hover:scale-105 transition-all duration-700">
                     <svg viewBox="0 0 200 200" className="w-40 h-40 text-[#374F3B]" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -633,25 +633,25 @@ export default function App() {
                       <circle cx="100" cy="160" r="14" fill="#374F3B" opacity="0.15" />
                     </svg>
                   </div>
-                  <div className="relative z-20 text-white font-sans">
-                    <span className="text-xs font-bold tracking-wider uppercase bg-[#374F3B] px-2.5 py-1 rounded">Nilai Utama</span>
-                    <h3 className="text-lg md:text-xl font-bold mt-2 leading-snug">Menanam Bersama Alam Tanpa Meninggalkan Jejak Mikroplastik</h3>
+                  <div className="relative z-20 text-white font-sans max-w-sm">
+                    <span className="text-xs font-bold tracking-wider uppercase bg-[#374F3B] px-2.5 py-1 rounded">From Waste to Growth</span>
+                    <h3 className="text-lg md:text-xl font-bold mt-2 leading-snug">Pelepah pisang terbuang jadi pot semai bernilai.</h3>
                   </div>
                 </div>
 
-                <div className="bg-white rounded-2xl p-5 flex flex-col justify-between border border-[#E5E7EB] hover:border-[#374F3B] transition-all">
-                  <GiBananaBunch className="text-2xl text-[#374F3B]" />
+                <div className="bg-white rounded-2xl p-6 border border-[#E5E7EB] min-h-[210px] flex flex-col justify-between hover:border-[#374F3B] transition-all group">
+                  <GiBananaBunch className="text-3xl text-[#374F3B] group-hover:rotate-6 transition-transform" />
                   <div>
-                    <h4 className="font-bold text-[#374F3B] text-sm">Upcycle Berdampak</h4>
-                    <p className="text-xs text-[#6B7280] mt-1">Dibuat dari sisa serat pelepah pisang petani lokal Indonesia.</p>
+                    <h3 className="font-bold text-[#0A0A0A] text-base">Grow Naturally</h3>
+                    <p className="text-[#6B7280] text-sm mt-2 leading-relaxed">Menanam lebih dekat dengan alam dari limbah pertanian.</p>
                   </div>
                 </div>
 
-                <div className="bg-[#374F3B] text-white rounded-2xl p-5 flex flex-col justify-between border border-[#E5E7EB] hover:bg-[#374F3B]/95 transition-all">
-                  <FaLeaf className="text-2xl" />
+                <div className="bg-[#374F3B] rounded-2xl p-6 border border-[#374F3B] min-h-[210px] flex flex-col justify-between text-white hover:shadow-xl transition-all">
+                  <FaLeaf className="text-3xl text-white" />
                   <div>
-                    <h4 className="font-bold text-sm">Praktis & Instan</h4>
-                    <p className="text-xs text-[#EDF1E4] mt-1">Cukup kubur pot utuh, biarkan terurai dan menyatu dengan bumi.</p>
+                    <h3 className="font-bold text-base">Better Choice for Tomorrow</h3>
+                    <p className="text-white/90 text-sm mt-2 leading-relaxed">Alternatif pot semai untuk kurangi plastik pembibitan.</p>
                   </div>
                 </div>
               </div>
