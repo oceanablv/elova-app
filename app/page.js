@@ -573,9 +573,9 @@ export default function App() {
             )}
           </header>
 
-          <main className="max-w-7xl mx-auto px-6 py-8 relative z-10">
+          <main className="max-w-7xl mx-auto px-6 pt-4 pb-8 relative z-10">
             {/* HERO SECTION */}
-            <section id="hero" className="py-12 md:py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <section id="hero" className="pt-4 pb-12 md:pt-6 md:pb-20 lg:pt-8 lg:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7 flex flex-col items-start gap-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#EDF1E4] text-[#374F3B] text-xs font-bold uppercase tracking-wider">
                   <FaLeaf className="text-lg" /> Grow Green, Grow Better
